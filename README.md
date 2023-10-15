@@ -6,7 +6,7 @@
 
 Umix is a browser extension and developer tool for remixing websites. Let's make the web fun.
 
-If you're just interested in just trying it out, go to our [Repl.it playground](https://replit.com/@aidenbai05/QuestionableRedForm#script.js). Or, watch our video
+If you're just interested in just trying it out, go to our [Repl.it playground](https://replit.com/@aidenbai05/QuestionableRedForm#script.js). Or, [watch our video](https://youtu.be/8rdGUPiv2O0);
 
 Continue if you want to use it in real world websites.
 
