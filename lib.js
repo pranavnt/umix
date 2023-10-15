@@ -15,6 +15,7 @@ img.style.right = "10px";
 img.style.zIndex = "9999"; // Ensure the button is on top of other page elements
 img.style.width = "150px";
 img.style.height = "150px";
+img.style.backgroundColor = "#fff"
 
 let isOn = false;
 
