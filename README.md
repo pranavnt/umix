@@ -1,6 +1,6 @@
 > ⚠️ **Security Disclaimer**: Do not use in production. This is experimental software. Here be dragons 🐉
 
-<a href="https://youtu.be/8rdGUPiv2O0" target="_blank"><img width="200" alt="Banner" src="/umix-banner.png"></a>
+<a href="https://youtu.be/8rdGUPiv2O0" target="_blank"><img width="200" alt="Banner" src="/images/umix-banner.png"></a>
 
 # [umix.dev](https://umix.dev)
 
@@ -18,10 +18,10 @@ Continue if you want to use it in real world websites.
 2. Unzip `umix-master.zip`.
 3. Type `chrome://extensions` in your URL address bar
 4. Activate Developer Mode
-<img width="173" alt="image" src="/dev-mode.png">
+<img width="173" alt="image" src="/images/dev-mode.png">
 
 5. Click Load Unpacked
-<img width="466" alt="image" src="/unpacked.png">
+<img width="466" alt="image" src="/images/unpacked.png">
 
 6. Select the `umix-master` folder
 7. Profit.
@@ -36,20 +36,20 @@ Just drop a `<script>` tag at the end of your body... it's just that easy – no
 
 ## Inspiration
 
-**The Web is boring.** 
+**The Web is boring.**
 
-Monotonous dashboards. Identical interfaces. All apps look the same. 
+Monotonous dashboards. Identical interfaces. All apps look the same.
 
-**The Web should be fun.** 
+**The Web should be fun.**
 
-Our earliest memories, friends, and identities were made on the web. Deep in IRC chats and custom MySpace CSS and random Wikipedia docs, we found a home–a home in a community of folks who also found the Web fun. 
+Our earliest memories, friends, and identities were made on the web. Deep in IRC chats and custom MySpace CSS and random Wikipedia docs, we found a home–a home in a community of folks who also found the Web fun.
 
 While the Web has matured over the past couple years, there’s an undeniable charm to it’s more hackable and playful past.
 
 
 ## What it does
 
-**Remix the web.** Umix is a browser extension and developer tool that allows internet users to easily remix, reimagine, and reshare web interfaces. 
+**Remix the web.** Umix is a browser extension and developer tool that allows internet users to easily remix, reimagine, and reshare web interfaces.
 
 Imagine being able to hover on any part of the page, ask an AI to change it to your desires, and see your creation live – that’s Umix.
 
@@ -67,17 +67,15 @@ Finally, we built a developer tool that allows any web developer to integrate Um
 ## Challenges we ran into
 
 
-- **Unreliability of LLMs** — GPT-4 hallucinated (made stuff up) multiple times or didn’t know the answer to various questions when testing — we couldn’t build directly on top of OpenAI and needed to connect GPT-4 to other tools. We connected it to a web browser using langchain.js and had it fetch factual information/documentation for tools from websites if it was unsure about the answer. 
+- **Unreliability of LLMs** — GPT-4 hallucinated (made stuff up) multiple times or didn’t know the answer to various questions when testing — we couldn’t build directly on top of OpenAI and needed to connect GPT-4 to other tools. We connected it to a web browser using langchain.js and had it fetch factual information/documentation for tools from websites if it was unsure about the answer.
 - **DOM structure is hard** – we had to deal with ways to handle wrapper elements, excessive attributes, and overriding classes
 - **Designing the UI** – creating a very intuitive UI, especially for remixing use, is extremely difficult. We eventually landed on a very similar approach to v0.dev’s select tool
 - **CSR/CORS + Devtool fun** – creating a secure, safe, and robust developer tool and chrome extension, while ensuring security requirements are met took many arduous hours of crying
 
 ## What's next for Umix
 
-We made small demo post on Twitter (X) 12 hours ago and has been **viewed 25,000+ times**. 
+We made small demo post on Twitter (X) 12 hours ago and has been **viewed 25,000+ times**.
 
 We already have **80** people on our waitlist (as of 4 am)
 
 **It’s time to make the Web fun. Together, we can remix the web.**
-
-

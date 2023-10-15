@@ -32,19 +32,20 @@ app.post('/edit', async (req, res) => {
         verbose: true,
       });
     console.log("Loaded agent.");
-    
-    console.log(executor);
-    
-    const input = `You are a HTML processer. You are given raw HTML, and a task. 
-    Output the raw HTML and it's original content and nothing else. Try to be additive, keep as much of the original structure and styles unless otherwise specified. 
-    In the final output, only include the raw HTML — NOTHING else.
-    When image URLs are asked for, find an actual image URL on the internet to use.
-    Do NOT use the web browser unless the user asks for information on the internet (such as a summary or image).
 
-    HTML: ${html}
-    Task: ${edit}
-    The output MUST be HTML and HTML only — no text
-    `;
+    console.log(executor);
+
+    const input = `You are a HTML processer. You are given raw HTML, and a task.
+You must output the raw HTML and its original content and nothing else.
+// 1. Try to be additive, keep as much of the original structure and styles unless otherwise specified.
+// 2. In the final output, only include the raw HTML — NOTHING else.
+// 3. When image URLs are asked for, find an actual image URL on the internet to use.
+// 4. Do NOT use the web browser unless the user asks for information on the internet (such as a summary or image).
+
+## Input
+HTML: ${html}
+Task: ${edit}
+// The output MUST be HTML and HTML only — no text`;
 
     const result = await executor.call({ input });
 
@@ -55,4 +56,3 @@ app.post('/edit', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
 });
-
