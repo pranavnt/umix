@@ -15,7 +15,7 @@ require("dotenv").config();
 const port = process.env.PORT;
 
 const embeddings = new OpenAIEmbeddings();
-const model = new OpenAI({ modelName: "gpt-3.5-turbo-instruct", temperature: 0});
+const model = new OpenAI({ modelName: "gpt-4", temperature: 0});
 const tools = [
     new WebBrowser({ model, embeddings }),
 ];
@@ -39,7 +39,7 @@ app.post('/edit', async (req, res) => {
     Output the raw HTML and it's original content and nothing else. Try to be additive, keep as much of the original structure and styles unless otherwise specified. 
     In the final output, only include the raw HTML — NOTHING else.
     When image URLs are asked for, find an actual image URL on the internet to use.
-    Use the browser sparingly and only when necessary.
+    Do NOT use the web browser unless the user asks for information on the internet (such as a summary or image).
 
     HTML: ${html}
     Task: ${edit}
