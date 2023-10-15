@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Umix",
+    "description": "Lets you remix pages from all over the internet",
+    "version": "1.0",
+    "permissions": [
+      "activeTab"
+    ],
+    "icons": {
+      "1080": "images/logo2.png"
+    },
+    "default_popup": "popup.html",
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["index.js"]
+      }
+    ],
+
+    "web_accessible_resources": [
+      {
+        "resources": ["logo.png"], 
+        "matches": ["<all_urls>"]
+      }
+    ]
+
+  }
