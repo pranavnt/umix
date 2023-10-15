@@ -12,7 +12,7 @@ const app = express();
 require("dotenv").config();
 
 
-const port = 3000;
+const port = process.env.PORT;
 
 const embeddings = new OpenAIEmbeddings();
 const model = new OpenAI({ modelName: "gpt-4", temperature: 0});
