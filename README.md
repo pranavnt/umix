@@ -31,7 +31,7 @@ Continue if you want to use it in real world websites.
 Just drop a `<script>` tag at the end of your body... it's just that easy – no quirks, no external API, just AI goodness at your fingertips.
 
 ```js
-<script src="https://raw.githubusercontent.com/pranavnt/umix/master/library.js?token=GHSAT0AAAAAAB4IOFADRX73XYILZ3H2UZGWZJL3W6Q"></script>
+<script src="https://umix.dev/lib.js"></script>
 ```
 
 ## Inspiration
