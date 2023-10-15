@@ -14,12 +14,8 @@ require("dotenv").config();
 
 const port = 3000;
 
-// const openai = new oai.OpenAI({
-    // apiKey: "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",
-// })
-
-const embeddings = new OpenAIEmbeddings({apiKey: "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"});
-const model = new ChatOpenAI({ modelName: "gpt-4", temperature: 0,  apiKey: "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" });
+const embeddings = new OpenAIEmbeddings();
+const model = new OpenAI({ modelName: "gpt-4", temperature: 0});
 const tools = [
     new WebBrowser({ model, embeddings }),
 ];
@@ -32,47 +28,27 @@ app.post('/edit', async (req, res) => {
     const { html, edit } = req.body;
     console.log({html, edit});
     const executor = await initializeAgentExecutorWithOptions(tools, model, {
-        agentType: "openai-functions",
+        agentType: "zero-shot-react-description",
         verbose: true,
       });
     console.log("Loaded agent.");
     
     console.log(executor);
     
-    const input = `You are a HTML post processer. You are given raw HTML, and a task. Execute the task on the HTML, and output the raw HTML and it's original content and nothing else. Try to be additive, keep as much of the original structure and styles unless otherwise specified. Output only HTML and no text (no explanations after or before). If you are asked to provide a URL, show a REAL url, not a fake one saying one should insert something. You have access to the following additional functions: window.getCoffee() -> Promise<string>
-    getRandomJoke: Calls an API to fetch a random Chuck Norris joke.
-    Return Value: A string containing the joke.
-    getWeather(city): Calls an API to fetch weather information for a specified city.
-    getRandomQuote: Calls an API to fetch a random quote.
-    Return Value: A string containing the quote.
-    getRandomDog: Calls an API to fetch a random dog image.
-    Return Value: A string containing the URL of the dog image.
-    getRandomUser: Calls an API to fetch random user information.
-    Return Value: A string containing the first and last name of a randomly generated user.
-    
-    You have access to the fade, slide, and rotate classes. `
+    const input = `You are a HTML processer. You are given raw HTML, and a task. 
+    Output the raw HTML and it's original content and nothing else. Try to be additive, keep as much of the original structure and styles unless otherwise specified. 
+    In the final output, only include the raw HTML — NOTHING else.
+    When image URLs are asked for, find an actual image URL on the internet to use.
 
-    const result = await executor.run({ input })
-    
-    const chatCompletion = await openai.chat.completions.create({
-        messages: [{ role: "system", content: `You are a HTML post processer. You are given raw HTML, and a task. Execute the task on the HTML, and output the raw HTML and it's original content and nothing else. Try to be additive, keep as much of the original structure and styles unless otherwise specified. Output only HTML and no text (no explanations after or before). If you are asked to provide a URL, show a REAL url, not a fake one saying one should insert something. You have access to the following additional functions: window.getCoffee() -> Promise<string>
-getRandomJoke: Calls an API to fetch a random Chuck Norris joke.
-Return Value: A string containing the joke.
-getWeather(city): Calls an API to fetch weather information for a specified city.
-getRandomQuote: Calls an API to fetch a random quote.
-Return Value: A string containing the quote.
-getRandomDog: Calls an API to fetch a random dog image.
-Return Value: A string containing the URL of the dog image.
-getRandomUser: Calls an API to fetch random user information.
-Return Value: A string containing the first and last name of a randomly generated user.
+    HTML: ${html}
+    Task: ${edit}
+    The output MUST be HTML and HTML only — no text
+    `;
 
-You have access to the fade, slide, and rotate classes. 
-` },{ role: "user", content: `Here is an HTML element: ${html}. Here is your task ${edit}. Do not use script tags, write it inline.` }],
-        model: "gpt-3.5-turbo",
-    });
-    console.log(chatCompletion.choices[0].message);
+    const result = await executor.call({ input });
+
     console.log(result);
-    res.json({"content":chatCompletion.choices[0].message.content});
+    res.json({output: result});
 });
 
 app.listen(port, () => {
