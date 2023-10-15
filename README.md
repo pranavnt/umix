@@ -1,12 +1,12 @@
 > ⚠️ **Security Disclaimer**: Do not use in production. This is experimental software. Here be dragons 🐉
 
-<img width="200" alt="Group 1 (3)" src="/umix-banner.png">
+<a href="https://youtu.be/8rdGUPiv2O0" target="_blank"><img width="200" alt="Banner" src="/umix-banner.png"></a>
 
 # [umix.dev](https://umix.dev)
 
 Umix is a browser extension and developer tool for remixing websites. Let's make the web fun.
 
-If you're just interested in just trying it out, go to our [Repl.it playground](https://replit.com/@aidenbai05/QuestionableRedForm#script.js).
+If you're just interested in just trying it out, go to our [Repl.it playground](https://replit.com/@aidenbai05/QuestionableRedForm#script.js). Or, watch our video
 
 Continue if you want to use it in real world websites.
 
