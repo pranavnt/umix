@@ -32,3 +32,10 @@ Just drop a `<script>` tag at the end of your body... it's just that easy – no
 <script src="https://raw.githubusercontent.com/pranavnt/umix/master/library.js?token=GHSAT0AAAAAAB4IOFADRX73XYILZ3H2UZGWZJL3W6Q"></script>
 ```
 
+## Important Message
+
+Please don't use this too much. For every 10 people who **DONT** use this we can afford 1 more red bull :)
+
+![J2vSrbdep2GmjMFkwacgob3jKVSsTKWaK1SbTx5v jpeg` -  `CleanShot Image](https://github.com/pranavnt/umix/assets/38025074/3a85c4f3-c890-4459-9c1b-d4d3906e2ff4)
+
+
