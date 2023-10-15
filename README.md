@@ -6,7 +6,7 @@
 
 Umix is a browser extension and developer tool for remixing websites. Let's make the web fun.
 
-If you're just interested in just trying it out, go to our [Repl.it playground](https://replit.com/@aidenbai05/QuestionableRedForm#script.js). Or, [watch our video](https://youtu.be/8rdGUPiv2O0);
+If you're just interested in just trying it out, go to our [Repl.it playground](https://replit.com/@aidenbai05/QuestionableRedForm#script.js). Or, [watch our video](https://youtu.be/8rdGUPiv2O0).
 
 Continue if you want to use it in real world websites.
 
@@ -14,8 +14,8 @@ Continue if you want to use it in real world websites.
 
 > **Note:** Umix is pending approval on the Chrome Extension Store. For now, you can manually integrate it via Developer Mode. We currently only support Chrome and Chromium Browsers (Edge, Arc, Brave, Opera, etc.)
 
-1. [Click to download the project ZIP](https://github.com/pranavnt/umix/archive/refs/heads/master.zip); 
-2. Unzip `umix-master.zip`;
+1. [Click to download the project ZIP](https://github.com/pranavnt/umix/archive/refs/heads/master.zip)
+2. Unzip `umix-master.zip`.
 3. Type `chrome://extensions` in your URL address bar
 4. Activate Developer Mode
 <img width="173" alt="image" src="/dev-mode.png">
