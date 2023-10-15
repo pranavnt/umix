@@ -4,9 +4,11 @@
 
 # [umix.dev](https://umix.dev)
 
+Umix is a browser extension and developer tool for remixing websites. Let's make the web fun.
+
 If you're just interested in just trying it out, go to our [Repl.it playground](https://replit.com/@aidenbai05/QuestionableRedForm#script.js).
 
-Continue if you want to use it in real world websites:
+Continue if you want to use it in real world websites.
 
 ## Umix as a Browser Extension
 
@@ -29,3 +31,4 @@ Just drop a `<script>` tag at the end of your body... it's just that easy – no
 ```js
 <script src="https://raw.githubusercontent.com/pranavnt/umix/master/library.js?token=GHSAT0AAAAAAB4IOFADRX73XYILZ3H2UZGWZJL3W6Q"></script>
 ```
+
