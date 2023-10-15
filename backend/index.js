@@ -39,6 +39,7 @@ app.post('/edit', async (req, res) => {
     Output the raw HTML and it's original content and nothing else. Try to be additive, keep as much of the original structure and styles unless otherwise specified. 
     In the final output, only include the raw HTML — NOTHING else.
     When image URLs are asked for, find an actual image URL on the internet to use.
+    Use the browser sparingly and only when necessary.
 
     HTML: ${html}
     Task: ${edit}
