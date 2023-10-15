@@ -15,7 +15,7 @@ require("dotenv").config();
 const port = process.env.PORT;
 
 const embeddings = new OpenAIEmbeddings();
-const model = new OpenAI({ modelName: "gpt-4", temperature: 0});
+const model = new OpenAI({ modelName: "gpt-3.5-turbo-instruct", temperature: 0});
 const tools = [
     new WebBrowser({ model, embeddings }),
 ];
